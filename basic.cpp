@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include "Matrix.hpp"
+#include "Functions.hpp"
 using namespace std;
 
 template<typename T>
@@ -24,6 +25,13 @@ int main() {
     cout << (a*b) << " " << (a^b) << " " << (b*a) << " " << (b^a) << endl;
     a += b;
     cout << a << endl;
+
+    vector<vector<double>> vec = {{1},{2},{1}};
+    // vector<vector<double>> vec = {{3},{4},{1}};
+    // vector<vector<double>> vec = {{ 1. , 4.2 , 0.6 , 1.23 , 4.3 , 1.2, 2.5 }};
+    Matrix mvec(vec);
+    cout << functions::softmax.first(mvec) << endl;
+    cout << functions::softmax.second(mvec) << endl;
 
     return 0;
 }
